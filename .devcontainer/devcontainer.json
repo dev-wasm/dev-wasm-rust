@@ -1,0 +1,7 @@
+{
+    "name": "Rust WASM",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    }
+}
