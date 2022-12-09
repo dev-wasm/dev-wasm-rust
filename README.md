@@ -23,6 +23,6 @@ Visual studio should prompt you to see if you want to relaunch the workspace in 
 # Building and Running
 
 ```sh
-rustc main.rs --target wasm32-wasi
-wasmtime main.wasm
+rustc main.rs --target wasm32-wasi main.rs
+wasmtime main.wasm --dir .
 ```
