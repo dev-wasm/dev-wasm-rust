@@ -1,4 +1,4 @@
-FROM brendanburns/wasm-dev-base:0.0.2
+FROM brendanburns/wasm-dev-base:0.0.3
 
 # Rust
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && \
