@@ -27,7 +27,7 @@ Visual studio should prompt you to see if you want to relaunch the workspace in 
 then copies that file to a different file
 
 ```sh
-rustc main.rs --target wasm32-wasi main.rs
+rustc -g --target wasm32-wasi main.rs
 wasmtime main.wasm --dir .
 ```
 

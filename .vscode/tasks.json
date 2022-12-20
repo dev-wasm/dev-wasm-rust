@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build WASM-Rust (Debug)",
+            "type": "shell",
+            "command": "rustc -g --target wasm32-wasi main.rs",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Build WASM-Rust (Release)",
+            "type": "shell",
+            "command": "rustc --target wasm32-wasi main.rs",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Build WASM/WAGI-Rust (Debug)",
+            "type": "shell",
+            "command": "rustc -g --target wasm32-wasi wagi.rs",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}
