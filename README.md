@@ -32,16 +32,15 @@ wasmtime main.wasm --dir .
 ```
 
 ## Serving web requests
-`wagi.rs` uses the experimental [WAGI](https://github.com/deislabs/wagi) project 
-from [Microsoft Azure](https://learn.microsoft.com/en-us/azure/aks/use-wasi-node-pools)
-to host a simple web request server.
+There is a simple example of web serving via WebAssembly + CGI (WAGI) in
+the `webserver` directory. It uses the lighttpd web server and `mod_cgi`.
+See the `webserver/lighttpd.conf` file for more details.
 
 ```sh
-rustc wagi.rs --target wasm32-wasi wagi.rs
-# Run it in the WAGI server environment
-wagi --config wagi.toml
+rustc -g --target wasm32-wasi webserver/wagi.rs
+lighttpd -D -f webserver/lighttpd.conf
 ```
 
-WAGI serves on port 3000 by default. If you run it in codespaces, it should pop up
+lighttpd is configured to serve on port 8080. If you run it in codespaces, it should pop up
 a dialog making it super easy to connect to your server. In VS Code it should be
-available on http://localhost:3000.
+available on http://localhost:8080.

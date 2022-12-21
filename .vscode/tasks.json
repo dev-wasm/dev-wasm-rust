@@ -27,7 +27,7 @@
         {
             "label": "Build WASM/WAGI-Rust (Debug)",
             "type": "shell",
-            "command": "rustc -g --target wasm32-wasi wagi.rs",
+            "command": "rustc -g --target wasm32-wasi webserver/wagi.rs",
             "group": "build",
             "presentation": {
                 "reveal": "always",
