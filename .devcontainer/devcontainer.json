@@ -1,6 +1,6 @@
 {
     "name": "Rust WASM",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "image": "brendanburns/wasm-dev-base:0.0.7",
     "remoteEnv": {
 	"PATH": "${containerEnv:PATH}:/usr/local/lib/wasi-sdk-17.0/bin"
     },
