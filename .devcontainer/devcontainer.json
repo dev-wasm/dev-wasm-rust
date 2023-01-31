@@ -14,8 +14,8 @@
     "customizations": {
 	"vscode": {
 		"extensions": [
-			"ms-vscode.cpptools",
-			"golang.Go"
+			"ms-vscode.cpptools"
 		]
+        }
     }
 }
